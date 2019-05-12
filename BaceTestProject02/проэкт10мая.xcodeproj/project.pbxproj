@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A57451228860A30084B440 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A57450228860A30084B440 /* AddItemViewController.swift */; };
 		22DAC5CF22853B2900F0B873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DAC5CE22853B2900F0B873 /* AppDelegate.swift */; };
 		22DAC5D122853B2900F0B873 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DAC5D022853B2900F0B873 /* ViewController.swift */; };
 		22DAC5D422853B2900F0B873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DAC5D222853B2900F0B873 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22A57450228860A30084B440 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		22DAC5CB22853B2900F0B873 /* проэкт10мая.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "проэкт10мая.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DAC5CE22853B2900F0B873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22DAC5D022853B2900F0B873 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				22DAC5CE22853B2900F0B873 /* AppDelegate.swift */,
 				22DAC5D022853B2900F0B873 /* ViewController.swift */,
 				22DAC5D222853B2900F0B873 /* Main.storyboard */,
+				22A57450228860A30084B440 /* AddItemViewController.swift */,
 				22DAC5E422853D5E00F0B873 /* ModelTest.swift */,
 				22DAC5E222853C9B00F0B873 /* TestTableViewCell.swift */,
 				22DAC5D522853B2A00F0B873 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A57451228860A30084B440 /* AddItemViewController.swift in Sources */,
 				22DAC5D122853B2900F0B873 /* ViewController.swift in Sources */,
 				22DAC5CF22853B2900F0B873 /* AppDelegate.swift in Sources */,
 				22DAC5E322853C9B00F0B873 /* TestTableViewCell.swift in Sources */,

@@ -14,11 +14,13 @@ class Test {
     var lastName: String
     var bornDate: String
     var imageName: String
+    var city: String
     
-    init(name: String, lastName: String, bornDate: String, imageName: String) {
+    init(name: String, lastName: String, bornDate: String, imageName: String,city: String) {
         self.name = name
         self.lastName = lastName
         self.bornDate = bornDate
         self.imageName = imageName
+        self.city = city
     }
 }

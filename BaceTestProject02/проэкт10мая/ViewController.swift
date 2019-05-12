@@ -34,10 +34,10 @@ class ViewController: UIViewController,MyProtocol {
     
     func createUsers() {
         
-        let oneUser = Test(name: "Din", lastName: "Rid", bornDate: "01,09,1981", imageName: "man1")
-        let twoUser = Test(name: "JacK", lastName: "Nickolson", bornDate: "8,09,1965", imageName: "man2")
-        let threeUser = Test(name: "Nick", lastName: "Tornton", bornDate: "05,12,1786", imageName: "man3")
-        let fourUser = Test(name: "Nuki", lastName: "Hacki", bornDate: "11,10,1954", imageName: "man4")
+        let oneUser = Test(name: "Din", lastName: "Rid", bornDate: "01,09,1981", imageName: "man1", city: "Tokyo")
+        let twoUser = Test(name: "JacK", lastName: "Nickolson", bornDate: "8,09,1965", imageName: "man2", city: "Kiev")
+        let threeUser = Test(name: "Nick", lastName: "Tornton", bornDate: "05,12,1786", imageName: "man3", city: "London")
+        let fourUser = Test(name: "Nuki", lastName: "Hacki", bornDate: "11,10,1954", imageName: "man4", city: "Corror")
         
         users.append(oneUser)
         users.append(twoUser)
@@ -63,7 +63,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         cell.lastNameLabel.text = "Last Name: " + test.lastName
         cell.dateLabel.text = "BornDate: " + test.bornDate
         cell.imageName.image = UIImage(named: test.imageName)
-        
+        cell.cityLabel.text = "City of residence: " + test.city
         return cell
     }
     
