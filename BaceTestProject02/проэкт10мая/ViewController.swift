@@ -12,7 +12,9 @@ protocol MyProtocol {
     func createUsers()
 }
 
-class ViewController: UIViewController,MyProtocol {
+class ViewController: UIViewController,MyProtocol,AddItemViewControllerDelegate {
+   
+    
    
     
     
@@ -44,7 +46,19 @@ class ViewController: UIViewController,MyProtocol {
         users.append(threeUser)
         users.append(fourUser)
     }
+    func didCreateItem(item: Test) {
+        self.users.append(item)
+        self.tableview.reloadData()
+    }
     
+    
+    
+    @IBAction func addItemBarButton(_ sender: UIBarButtonItem) {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "AddItemViewController") as? AddItemViewController {
+            controller.delegate = self
+        self.present(controller,animated: true,completion: nil)
+    }
+        }
     
 
 }
@@ -69,3 +83,4 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     
 }
+

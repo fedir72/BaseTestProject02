@@ -123,7 +123,11 @@
                     <navigationItem key="navigationItem" title="Our developers" id="Zqc-tg-MBm">
                         <rightBarButtonItems>
                             <barButtonItem landscapeImage="man1" id="VIT-xe-pIi"/>
-                            <barButtonItem systemItem="add" id="yod-cd-yDj"/>
+                            <barButtonItem systemItem="add" id="yod-cd-yDj">
+                                <connections>
+                                    <action selector="addItemBarButton:" destination="BYZ-38-t0r" id="99v-wN-dFa"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -173,6 +177,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="ovD-fg-tnl" eventType="touchUpInside" id="sTQ-tJ-2bG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crp-Ls-Din">
                                 <rect key="frame" x="16" y="456" width="113" height="30"/>
@@ -181,6 +188,9 @@
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="exitButtonAction:" destination="ovD-fg-tnl" eventType="touchUpInside" id="UaY-kx-jTb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City of residence" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-tg-a4e">
                                 <rect key="frame" x="16" y="198" width="343" height="30"/>
@@ -199,6 +209,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N2x-Kx-mQr"/>
                     </view>
+                    <connections>
+                        <outlet property="bornDateLabel" destination="gKq-cn-Tas" id="fqS-MY-zVN"/>
+                        <outlet property="cityLabel" destination="xmU-tg-a4e" id="RgA-hf-a3V"/>
+                        <outlet property="lastNameLabel" destination="hmA-FW-MRf" id="Wsf-Na-OdD"/>
+                        <outlet property="nameLabel" destination="vsl-0W-xnz" id="vHt-E0-WpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sM-oR-UDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
