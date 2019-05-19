@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol MyProtocol {
     func createUsers()
 }
@@ -69,16 +70,23 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //создаем обьект тест
-        let test = self.users[indexPath.row]
-        //создаем ячейку таблицы для обьекта
-        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath) as! TestTableViewCell
-        cell.nameLabel.text = "Name: " + test.name
-        cell.lastNameLabel.text = "Last Name: " + test.lastName
-        cell.dateLabel.text = "BornDate: " + test.bornDate
-        cell.imageName.image = UIImage(named: test.imageName)
-        cell.cityLabel.text = "City of residence: " + test.city
+       //проверка наличия таблицы
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath) as? TestTableViewCell {
+            
+            //создаем обьект значение для передачи данных
+            let item = self.users[indexPath.row]
+        
+        //применяем функцию рефреш из ячейки
+        cell.refresh(item)
+            
         return cell
+            
+        }
+       return UITableViewCell()
+    }
+    //высота ячейки вручную
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 270
     }
     
     

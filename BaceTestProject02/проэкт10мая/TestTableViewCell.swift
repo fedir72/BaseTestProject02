@@ -15,4 +15,15 @@ class TestTableViewCell: UITableViewCell {
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    
+    
+  public  func refresh(_ model: Test) {
+        //создаем ячейку таблицы для обьекта
+        nameLabel.text = "Name: " + model.name
+        lastNameLabel.text = "Last Name: " + model.lastName
+        dateLabel.text = "BornDate: " + model.bornDate
+        imageName.image = UIImage(named: model.imageName)
+       cityLabel.text = "City of residence: " + model.city
+    }
+    
 }
