@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       //место на карте и описание к нему
-        let locatiom = CLLocationCoordinate2DMake(49.53, 36.01)
+        let locatiom = CLLocationCoordinate2DMake(49.5336, 36.0131)
         //функция приближения места на карте при загрузке
         let span = MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
         let region = MKCoordinateRegion(center: locatiom, span: span)

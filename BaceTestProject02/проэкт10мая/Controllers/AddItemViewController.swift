@@ -16,6 +16,7 @@ class AddItemViewController: UIViewController {
     
     weak var delegate: AddItemViewControllerDelegate?
     
+    @IBOutlet weak var imageNameTextField: UITextField!
     @IBOutlet weak var cityLabel: UITextField!
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var lastNameLabel: UITextField!
@@ -35,8 +36,8 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        if let name = self.nameLabel.text, let lastName = self.lastNameLabel.text, let bornDate = self.bornDateLabel.text, let city = self.cityLabel.text,name.isEmpty == false,lastName.isEmpty == false, bornDate.isEmpty == false, city.isEmpty == false {
-            self.createItem(name: name, lastName: lastName, bornDate: bornDate,city: city)
+        if let name = self.nameLabel.text, let imageName = self.imageNameTextField.text, let lastName = self.lastNameLabel.text, let bornDate = self.bornDateLabel.text, let city = self.cityLabel.text,name.isEmpty == false,lastName.isEmpty == false, bornDate.isEmpty == false, city.isEmpty == false,imageName.isEmpty == false {
+            self.createItem(name: name, lastName: lastName, bornDate: bornDate,imageName: imageName,city: city)
         }else {
             self.alert(title: "ахтунг", message: "Введите все данные")
         }
@@ -44,8 +45,8 @@ class AddItemViewController: UIViewController {
         
         
     }
-    func createItem(name: String,lastName: String, bornDate: String, city: String) {
-        let item = Test(name: name, lastName: lastName, bornDate: bornDate, imageName: "man7", city: city)
+    func createItem(name: String,lastName: String, bornDate: String,imageName: String, city: String) {
+        let item = Test(name: name, lastName: lastName, bornDate: bornDate, imageName: imageName, city: city)
         //делегируем полномочия
         self.delegate?.didCreateItem(item: item)
         self.dismiss(animated: true, completion: nil)
